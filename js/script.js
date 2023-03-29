@@ -45,21 +45,10 @@ createApp({
             } else {
                 this.currentIndex--;
             }
+        },
+        startCarousel(){
+            setInterval(nextImg, 2000)
         }
     }
 }).mount('#app');  
 
-
-
-function startCarousel() {
-    autoslider = setInterval(nextImg, 2000);
-}
-
-function stopCarousel (){
-    clearInterval (autoslider);
-}
-
-slider.addEventListener('mouseover', stopCarousel);
-slider.addEventListener('mouseout', startCarousel);
-
-startCarousel()
