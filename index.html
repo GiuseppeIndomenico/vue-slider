@@ -23,16 +23,20 @@
 
 
                 <div class="slide">
-                    <img :src="images[currentIndex].image" alt="">
+                    <img :src="images[currentIndex].image" :alt="images[currentIndex].title">
                 </div>
-
-
-                <button class="prev">
+                <div class="text-slide  d-flex align-items-center justify-content-center flex-column">
+                     <h3 class="fw-semibold">{{images[currentIndex].title}}</h3>
+                    <p class="p-1">{{images[currentIndex].text}}</p>
+                </div>
+                
+                
+                <button @click="prevSlide" class="prev">
 
                     <i class="fa-solid fa-circle-arrow-left"></i>
                 </button>
 
-                <button class="next">
+                <button @click="nextSlide" class="next">
                     <i class="fa-solid fa-circle-arrow-right"></i>
 
                 </button>
