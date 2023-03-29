@@ -27,7 +27,7 @@ createApp({
                 }
             ],
             currentIndex: 0,
-           
+            intervalSlide: ''
         }
     },
     methods: {
@@ -37,7 +37,6 @@ createApp({
             } else {
                 this.currentIndex++;
             }
-
         },
         prevSlide() {
             if (this.currentIndex === 0) {
@@ -46,12 +45,15 @@ createApp({
                 this.currentIndex--;
             }
         },
-        
+        startSlide() {
+            this. intervalSlide = setInterval(this.nextSlide, 2000);
+        },
+        stopSlide() {
+            clearInterval(this. intervalSlide);
+        }
     },
-    mounted(){
-        setInterval(nextSlide, 2000);
+    mounted() {
+        this.intervalSlide = setInterval(this.nextSlide, 2000);
     }
-
 }).mount('#app');
-  
 
