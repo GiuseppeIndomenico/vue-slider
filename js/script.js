@@ -46,14 +46,14 @@ createApp({
             }
         },
         startSlide() {
-            this. intervalSlide = setInterval(this.nextSlide, 2000);
+            this. intervalSlide = setInterval(this.nextSlide, 3000);
         },
         stopSlide() {
             clearInterval(this. intervalSlide);
         }
     },
     mounted() {
-        this.intervalSlide = setInterval(this.nextSlide, 2000);
+        this.intervalSlide = setInterval(this.nextSlide, 3000);
     }
 }).mount('#app');
 
