@@ -46,9 +46,12 @@ createApp({
                 this.currentIndex--;
             }
         },
-        startCarousel(){
-            setInterval(nextImg, 2000)
-        }
+        
+    },
+    mounted(){
+        setInterval(nextSlide, 2000);
     }
-}).mount('#app');  
+
+}).mount('#app');
+  
 
